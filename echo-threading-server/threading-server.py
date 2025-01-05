@@ -34,7 +34,7 @@ def handle_client(conn, addr):
         client_msg = conn.recv(msg_length).decode(FORMAT)
         print(f"[{addr}] {client_msg}")
         if client_msg == DISCONNECT_MSG:
-            print("[DISCONNECTING] client has disconnected.")
+            print(f"[DISCONNECTING] client {addr} has disconnected.")
             connected = False
 
     conn.close()
